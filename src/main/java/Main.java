@@ -16,7 +16,7 @@ public class Main {
         new PrologAsker(PROLOG_PATH).findByAttraction("zamek");
         new PrologAsker(PROLOG_PATH).findByMaxPrice(1000);
         new PrologAsker(PROLOG_PATH).findByMaxPriceForPeople(1000, 2);
-        new MainFrame();
+        new MainFrame(new PrologAsker(PROLOG_PATH));
     }
 
 }
