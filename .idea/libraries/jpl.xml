@@ -4,6 +4,9 @@
       <root url="jar://$PROJECT_DIR$/lib/jpl.jar!/" />
     </CLASSES>
     <JAVADOC />
+    <NATIVE>
+      <root url="file:///usr/lib/swi-prolog/lib/amd64" />
+    </NATIVE>
     <SOURCES />
   </library>
 </component>
