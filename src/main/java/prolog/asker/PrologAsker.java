@@ -16,7 +16,7 @@ public class PrologAsker {
     }
 
     //wycieczka(KR, M, R, A, K, D, T, W, Z)
-    public void find_by_city(String cityName) {
+    public void findByCity(String cityName) {
         System.out.println("Looking for city...");
         Query query = new QueryBuilder("wycieczka")
                 .addNewVariable("KR").addNewAtom(cityName)

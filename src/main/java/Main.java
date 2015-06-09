@@ -8,7 +8,7 @@ import prolog.asker.PrologAsker;
  */
 public class Main {
     public static void main(String args[]) {
-        new PrologAsker("src/main/prolog/baza.pl").find_by_city("torun");
+        new PrologAsker("src/main/prolog/baza.pl").findByCity("torun");
         new MainFrame();
     }
 
