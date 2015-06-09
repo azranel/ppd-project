@@ -29,8 +29,11 @@ public class PrologAsker {
      */
 	public Collection<String> getResults(Map<String, String> data) {
 		Collection<String> results = new ArrayList<>();
-		results.add("example 1");
-		results.add("example 2");
+		
+		// TODO Get informations from Prolog. This is only example.
+		for(String feature: data.keySet())
+			results.add(feature + " -> " + data.get(feature));
+		
 		return results;
 	}
     
