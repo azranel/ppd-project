@@ -2,6 +2,7 @@ package prolog.asker;
 
 import jpl.Query;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Hashtable;
 import java.util.Map;
@@ -27,8 +28,10 @@ public class PrologAsker {
      * @return Collection of Strings to print on GUI
      */
 	public Collection<String> getResults(Map<String, String> data) {
-		// TODO Auto-generated method stub
-		return null;
+		Collection<String> results = new ArrayList<>();
+		results.add("example 1");
+		results.add("example 2");
+		return results;
 	}
     
     //wycieczka(KR, M, R, A, K, D, T, W, Z)
