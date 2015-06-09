@@ -2,7 +2,9 @@ package prolog.asker;
 
 import jpl.Query;
 
+import java.util.Collection;
 import java.util.Hashtable;
+import java.util.Map;
 
 /**
  * Created by azranel on 09.06.15.
@@ -16,6 +18,19 @@ public class PrologAsker {
         }
     }
 
+    /**
+     * 
+     * GUI needs something to communicate with logic.
+     * 
+     * @param data - map with parameters for Prolog where key is name of feature and value is just its value
+     * 				 Example: "atrakcje" -> "jezioro", "kraj" -> "Polska"  
+     * @return Collection of Strings to print on GUI
+     */
+	public Collection<String> getResults(Map<String, String> data) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+    
     //wycieczka(KR, M, R, A, K, D, T, W, Z)
     public void findByCountry(String countryName) {
         System.out.println("Looking for country...");
@@ -178,4 +193,5 @@ public class PrologAsker {
         } else
             System.out.println(BRAK);
     }
+
 }
