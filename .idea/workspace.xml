@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca771658-23c4-4c71-9add-9d74544d5898" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/target/classes/Main.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/target/classes/prolog/asker/QueryBuilder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/target/classes/models/Trip.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/target/classes/gui/MainFrame.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/target/classes/prolog/asker/PrologAsker$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/target/classes/prolog/asker/PrologAsker.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/target/classes/models/Trip$KEYS.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/models/Trip.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java" afterPath="$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/target/classes/gui/MainFrame.class" afterPath="$PROJECT_DIR$/src/main/target/classes/gui/MainFrame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/target/classes/models/Trip$KEYS.class" afterPath="$PROJECT_DIR$/src/main/target/classes/models/Trip$KEYS.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/target/classes/models/Trip.class" afterPath="$PROJECT_DIR$/src/main/target/classes/models/Trip.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" afterPath="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/main.iml" afterPath="$PROJECT_DIR$/src/main/main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/prolog/asker/QueryBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/prolog/asker/QueryBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/models/Trip.java" afterPath="$PROJECT_DIR$/src/main/java/models/Trip.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/prolog/baza.pl" afterPath="$PROJECT_DIR$/src/main/prolog/baza.pl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ppd-project.iws" />
@@ -55,20 +46,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baza.pl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="baza.pl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/prolog/baza.pl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.90816325">
-              <caret line="50" column="55" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrologAsker.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PrologAsker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="7.9438777">
               <caret line="205" column="1" selection-start-line="205" selection-start-column="1" selection-end-line="205" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -81,15 +72,18 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/gui/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="136" column="112" selection-start-line="136" selection-start-column="112" selection-end-line="136" selection-end-column="112" />
+              <caret line="148" column="92" selection-start-line="148" selection-start-column="92" selection-end-line="148" selection-end-column="92" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7401#7409#0" expanded="true" />
-                <element signature="e#7472#7480#0" expanded="true" />
-                <element signature="e#7575#7583#0" expanded="true" />
-                <element signature="e#7761#7769#0" expanded="true" />
-                <element signature="e#7864#7872#0" expanded="true" />
-                <element signature="e#7943#7951#0" expanded="true" />
+                <element signature="e#889#924#0" expanded="true" />
+                <element signature="e#990#1025#0" expanded="true" />
+                <element signature="e#7226#7234#0" expanded="true" />
+                <element signature="e#7291#7299#0" expanded="true" />
+                <element signature="e#7403#7411#0" expanded="true" />
+                <element signature="e#7590#7598#0" expanded="true" />
+                <element signature="e#7702#7710#0" expanded="true" />
+                <element signature="e#7790#7798#0" expanded="true" />
+                <element signature="e#7919#7927#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/models/Trip.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="220" column="20" selection-start-line="220" selection-start-column="20" selection-end-line="220" selection-end-column="20" />
+              <caret line="177" column="44" selection-start-line="177" selection-start-column="44" selection-end-line="177" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/prolog/asker/QueryBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,11 +148,11 @@
         <option value="$PROJECT_DIR$/.idea/compiler.xml" />
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/prolog/asker/QueryBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/Trip.java" />
         <option value="$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/Trip.java" />
         <option value="$PROJECT_DIR$/src/main/prolog/baza.pl" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/prolog/asker/QueryBuilder.java" />
       </list>
     </option>
   </component>
@@ -187,7 +181,7 @@
     <option name="width" value="1368" />
     <option name="height" value="739" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -213,8 +207,9 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -271,9 +266,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ppd-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -693,11 +705,19 @@
       <workItem from="1433957426478" duration="3072000" />
       <workItem from="1433969440171" duration="136000" />
       <workItem from="1433974644590" duration="2363000" />
+      <workItem from="1433979465171" duration="919000" />
     </task>
+    <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/azranel/ppd-project&#10;&#10;Conflicts:&#10;&#9;src/main/java/gui/MainFrame.java&#10;">
+      <created>1433979647137</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1433979647137</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28769000" />
+    <option name="totallyTimeSpent" value="29688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="30" width="1368" height="739" extended-state="6" />
@@ -710,7 +730,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32636657" sideWeight="0.5063898" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.07877813" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32636657" sideWeight="0.49361023" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -740,6 +760,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge branch 'master' of https://github.com/azranel/ppd-project&#10;&#10;Conflicts:&#10;&#9;src/main/java/gui/MainFrame.java&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/azranel/ppd-project&#10;&#10;Conflicts:&#10;&#9;src/main/java/gui/MainFrame.java&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -805,12 +829,15 @@
           <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7401#7409#0" expanded="true" />
-            <element signature="e#7472#7480#0" expanded="true" />
-            <element signature="e#7575#7583#0" expanded="true" />
-            <element signature="e#7761#7769#0" expanded="true" />
-            <element signature="e#7864#7872#0" expanded="true" />
-            <element signature="e#7943#7951#0" expanded="true" />
+            <element signature="e#889#924#0" expanded="true" />
+            <element signature="e#990#1025#0" expanded="true" />
+            <element signature="e#7226#7234#0" expanded="true" />
+            <element signature="e#7291#7299#0" expanded="true" />
+            <element signature="e#7403#7411#0" expanded="true" />
+            <element signature="e#7590#7598#0" expanded="true" />
+            <element signature="e#7702#7710#0" expanded="true" />
+            <element signature="e#7790#7798#0" expanded="true" />
+            <element signature="e#7919#7927#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -859,12 +886,15 @@
           <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7401#7409#0" expanded="true" />
-            <element signature="e#7472#7480#0" expanded="true" />
-            <element signature="e#7575#7583#0" expanded="true" />
-            <element signature="e#7761#7769#0" expanded="true" />
-            <element signature="e#7864#7872#0" expanded="true" />
-            <element signature="e#7943#7951#0" expanded="true" />
+            <element signature="e#889#924#0" expanded="true" />
+            <element signature="e#990#1025#0" expanded="true" />
+            <element signature="e#7226#7234#0" expanded="true" />
+            <element signature="e#7291#7299#0" expanded="true" />
+            <element signature="e#7403#7411#0" expanded="true" />
+            <element signature="e#7590#7598#0" expanded="true" />
+            <element signature="e#7702#7710#0" expanded="true" />
+            <element signature="e#7790#7798#0" expanded="true" />
+            <element signature="e#7919#7927#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -941,12 +971,15 @@
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7401#7409#0" expanded="true" />
-            <element signature="e#7472#7480#0" expanded="true" />
-            <element signature="e#7575#7583#0" expanded="true" />
-            <element signature="e#7761#7769#0" expanded="true" />
-            <element signature="e#7864#7872#0" expanded="true" />
-            <element signature="e#7943#7951#0" expanded="true" />
+            <element signature="e#889#924#0" expanded="true" />
+            <element signature="e#990#1025#0" expanded="true" />
+            <element signature="e#7226#7234#0" expanded="true" />
+            <element signature="e#7291#7299#0" expanded="true" />
+            <element signature="e#7403#7411#0" expanded="true" />
+            <element signature="e#7590#7598#0" expanded="true" />
+            <element signature="e#7702#7710#0" expanded="true" />
+            <element signature="e#7790#7798#0" expanded="true" />
+            <element signature="e#7919#7927#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -981,12 +1014,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7401#7409#0" expanded="true" />
-            <element signature="e#7472#7480#0" expanded="true" />
-            <element signature="e#7575#7583#0" expanded="true" />
-            <element signature="e#7761#7769#0" expanded="true" />
-            <element signature="e#7864#7872#0" expanded="true" />
-            <element signature="e#7943#7951#0" expanded="true" />
+            <element signature="e#889#924#0" expanded="true" />
+            <element signature="e#990#1025#0" expanded="true" />
+            <element signature="e#7226#7234#0" expanded="true" />
+            <element signature="e#7291#7299#0" expanded="true" />
+            <element signature="e#7403#7411#0" expanded="true" />
+            <element signature="e#7590#7598#0" expanded="true" />
+            <element signature="e#7702#7710#0" expanded="true" />
+            <element signature="e#7790#7798#0" expanded="true" />
+            <element signature="e#7919#7927#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1161,57 +1197,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="136" column="112" selection-start-line="136" selection-start-column="112" selection-end-line="136" selection-end-column="112" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7401#7409#0" expanded="true" />
-            <element signature="e#7472#7480#0" expanded="true" />
-            <element signature="e#7575#7583#0" expanded="true" />
-            <element signature="e#7761#7769#0" expanded="true" />
-            <element signature="e#7864#7872#0" expanded="true" />
-            <element signature="e#7943#7951#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="205" column="1" selection-start-line="205" selection-start-column="1" selection-end-line="205" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Trip.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="220" column="20" selection-start-line="220" selection-start-column="20" selection-end-line="220" selection-end-column="20" />
+          <caret line="177" column="44" selection-start-line="177" selection-start-column="44" selection-end-line="177" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/prolog/asker/QueryBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <caret line="148" column="92" selection-start-line="148" selection-start-column="92" selection-end-line="148" selection-end-column="92" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#889#924#0" expanded="true" />
+            <element signature="e#990#1025#0" expanded="true" />
+            <element signature="e#7226#7234#0" expanded="true" />
+            <element signature="e#7291#7299#0" expanded="true" />
+            <element signature="e#7403#7411#0" expanded="true" />
+            <element signature="e#7590#7598#0" expanded="true" />
+            <element signature="e#7702#7710#0" expanded="true" />
+            <element signature="e#7790#7798#0" expanded="true" />
+            <element signature="e#7919#7927#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/prolog/baza.pl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.90816325">
-          <caret line="50" column="55" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/prolog/asker/QueryBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.9438777">
+          <caret line="205" column="1" selection-start-line="205" selection-start-column="1" selection-end-line="205" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

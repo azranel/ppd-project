@@ -1,6 +1,7 @@
 package models;
 
 import com.google.common.base.Strings;
+import com.sun.deploy.util.StringUtils;
 import gui.MainFrame;
 import jpl.Query;
 import prolog.asker.QueryBuilder;
@@ -172,8 +173,10 @@ public class Trip {
             else {
                 if (values[i].equals(cost) || values[i].equals(howMuchDays))
                     builder.addNewInteger(Integer.valueOf(values[i]));
-                else
-                    builder.addNewAtom(values[i]);
+                else {
+                    String value = values[i].replace(' ', '_');
+                    builder.addNewAtom(value);
+                }
             }
         }
         return builder.buildQuery();
