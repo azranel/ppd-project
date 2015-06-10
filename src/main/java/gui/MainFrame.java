@@ -2,6 +2,8 @@ package gui;
 
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,11 +14,13 @@ import java.util.Map;
 
 
 
+
+
 import javax.swing.*;
 
-
-
 import prolog.asker.PrologAsker;
+
+
 
 
 
@@ -117,10 +121,18 @@ public class MainFrame extends JFrame {
     	resultsTextArea = new JTextPane();
 		resultsScrollPane = new JScrollPane(resultsTextArea);
     	
-    	GridLayout layout = new GridLayout(2,1);
+    	GridBagLayout layout = new GridBagLayout();
     	resultsPanel.setLayout(layout);
-    	resultsPanel.add(resultsScrollPane);
-    	resultsPanel.add(solutionButton);
+    	
+    	GridBagConstraints c1 = new GridBagConstraints();
+    	c1.gridx = 0; c1.gridy = 0;
+    	c1.ipady = 300; c1.ipadx = 300;
+    	resultsPanel.add(resultsScrollPane, c1);
+    	
+    	GridBagConstraints c2 = new GridBagConstraints();
+    	c2.gridx = 0; c2.gridy = 2;
+    	resultsPanel.add(solutionButton, c2);
+    	
     	resultsPanel.setBorder(BorderFactory.createTitledBorder("Rezultaty"));
 		return resultsPanel;
 	}
