@@ -39,6 +39,19 @@ wycieczka(polska, swinoujscie, morze, plaza, 1400, 7, pociag, sniadanie, osrodek
 wycieczka(polska, gniezno, miasto, brama, 300, 1, samochod, brak, brak).
 wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
 
+wycieczka(francja, nicea, miasto, morze, 2500, 5, samolot, all_inclusive, hotel).
+wycieczka('wielka brytania', londyn, miasto, 'park rozrywki', 1000, 3, autokar, brak, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+
 krajowa(M, R, A, K, D, T, W, Z) :- wycieczka(polska, M, R, A, K, D, T, W, Z).
 zagraniczna(M, R, A, K, D, T, W, Z) :- wycieczka(KR, M, R, A, K, D, T, W, Z), KR \= polska.
 

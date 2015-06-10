@@ -1,5 +1,10 @@
 package gui;
 
+
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.MultimapBuilder;
+
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -21,12 +26,6 @@ import javax.swing.*;
 import prolog.asker.PrologAsker;
 
 
-
-
-
-import com.google.common.collect.ArrayListMultimap;
-import com.google.common.collect.Multimap;
-import com.google.common.collect.MultimapBuilder;
 
 /**
  * Created by azranel on 09.06.15.

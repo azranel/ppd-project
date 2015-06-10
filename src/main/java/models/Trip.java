@@ -5,7 +5,6 @@ import jpl.Query;
 import prolog.asker.QueryBuilder;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Hashtable;
 
 /**
@@ -99,23 +98,23 @@ public class Trip {
     private String accomodation;
 
     public void copyValuesOf(Trip trip) {
-        if(!Strings.isNullOrEmpty(trip.country))
+        if (!Strings.isNullOrEmpty(trip.country))
             country = trip.country;
-        if(!Strings.isNullOrEmpty(trip.city))
+        if (!Strings.isNullOrEmpty(trip.city))
             city = trip.city;
-        if(!Strings.isNullOrEmpty(trip.region))
+        if (!Strings.isNullOrEmpty(trip.region))
             region = trip.region;
-        if(!Strings.isNullOrEmpty(trip.attraction))
+        if (!Strings.isNullOrEmpty(trip.attraction))
             attraction = trip.attraction;
-        if(!Strings.isNullOrEmpty(trip.cost))
+        if (!Strings.isNullOrEmpty(trip.cost))
             cost = trip.cost;
-        if(!Strings.isNullOrEmpty(trip.howMuchDays))
+        if (!Strings.isNullOrEmpty(trip.howMuchDays))
             howMuchDays = trip.howMuchDays;
-        if(!Strings.isNullOrEmpty(trip.transport))
+        if (!Strings.isNullOrEmpty(trip.transport))
             transport = trip.transport;
-        if(!Strings.isNullOrEmpty(trip.feeding))
+        if (!Strings.isNullOrEmpty(trip.feeding))
             feeding = trip.feeding;
-        if(!Strings.isNullOrEmpty(trip.accomodation))
+        if (!Strings.isNullOrEmpty(trip.accomodation))
             accomodation = trip.accomodation;
     }
 
@@ -133,7 +132,7 @@ public class Trip {
 
         public static KEYS[] getRangeOfKeys(int from, int to) {
             final KEYS[] allKeys = values();
-            if(from < 0 || to > allKeys.length)
+            if (from < 0 || to > allKeys.length)
                 throw new IllegalArgumentException("from or to are out of range");
             return Arrays.copyOfRange(allKeys, from, to);
         }
@@ -162,14 +161,14 @@ public class Trip {
 
     public Query toQuery() {
         QueryBuilder builder = new QueryBuilder("wycieczka");
-        String[] values = new String[] { country, city, region, attraction, cost,
+        String[] values = new String[]{country, city, region, attraction, cost,
                 howMuchDays, transport, feeding, accomodation};
         KEYS[] keys = KEYS.values();
-        for(int i = 0; i < values.length; i++) {
-            if(Strings.isNullOrEmpty(values[i]))
+        for (int i = 0; i < values.length; i++) {
+            if (Strings.isNullOrEmpty(values[i]))
                 builder.addNewVariable(keys[i].toString());
             else {
-                if(values[i].equals(cost) || values[i].equals(howMuchDays))
+                if (values[i].equals(cost) || values[i].equals(howMuchDays))
                     builder.addNewInteger(Integer.valueOf(values[i]));
                 else
                     builder.addNewAtom(values[i]);

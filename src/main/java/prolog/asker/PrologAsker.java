@@ -2,15 +2,11 @@ package prolog.asker;
 
 import com.google.common.base.Function;
 import com.google.common.collect.Collections2;
-import com.google.common.collect.FluentIterable;
-import com.google.common.collect.Iterables;
 import gui.MainFrame;
 import jpl.Query;
 import models.Trip;
 
-import java.lang.reflect.Array;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Created by azranel on 09.06.15.
@@ -25,21 +21,20 @@ public class PrologAsker {
     }
 
     /**
-     * 
      * GUI needs something to communicate with logic.
-     * 
+     *
      * @param data - map with parameters for Prolog where key is name of feature and value is just its value
-     * 				 Example: "atrakcje" -> "jezioro", "kraj" -> "Polska"  
+     *             Example: "atrakcje" -> "jezioro", "kraj" -> "Polska"
      * @return Collection of Strings to print on GUI
      */
-	public Collection<String> getResults(Map<String, String> data) {
-		Collection<String> results = new ArrayList<>();
+    public Collection<String> getResults(Map<String, String> data) {
+        Collection<String> results = new ArrayList<>();
 
         Trip trip = new Trip();
-		// TODO Get informations from Prolog. This is only example.
-		for(String feature: data.keySet()) {
+        // TODO Get informations from Prolog. This is only example.
+        for (String feature : data.keySet()) {
             String featureValue = data.get(feature);
-            if(!featureValue.equals(MainFrame.DOESNT_MATTER)) {
+            if (!featureValue.equals(MainFrame.DOESNT_MATTER)) {
                 switch (feature) {
                     case "kraj":
                         trip.setCountry(featureValue);
@@ -76,9 +71,9 @@ public class PrologAsker {
         }
         Query query = trip.toQuery();
         System.out.println(query.toString());
-        if(query.hasSolution()) {
+        if (query.hasSolution()) {
             Hashtable[] solutions = query.allSolutions();
-            for(Hashtable solution: solutions) {
+            for (Hashtable solution : solutions) {
                 Trip solut = new Trip(solution);
                 solut.copyValuesOf(trip);
                 results.add(solut.toString());
@@ -86,11 +81,11 @@ public class PrologAsker {
             }
         }
 
-		return results;
-	}
+        return results;
+    }
 
     private String[] mapKeysToStrings(Trip.KEYS[] input) {
-        final Collection<Trip.KEYS> keys =Arrays.asList(input);
+        final Collection<Trip.KEYS> keys = Arrays.asList(input);
         String[] stringKeys = Collections2.transform(keys, new Function<Trip.KEYS, String>() {
             @Override
             public String apply(Trip.KEYS input) {
@@ -194,7 +189,6 @@ public class PrologAsker {
                 .addNewInteger(price)
                 .addNewVariables("KR", "M", "R", "A", "K", "D", "T", "W", "Z")
                 .buildQuery();
-
 
 
         System.out.println(query.toString());
