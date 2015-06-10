@@ -1,7 +1,6 @@
 package models;
 
 import com.google.common.base.Strings;
-import com.sun.deploy.util.StringUtils;
 import jpl.Query;
 import prolog.asker.QueryBuilder;
 
