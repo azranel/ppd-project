@@ -39,11 +39,32 @@ public class PrologAsker {
                     case "kraj":
                         trip.setCountry(featureValue);
                         break;
+                    case "miasto":
+                        trip.setCity(featureValue);
+                        break;
                     case "atrakcje":
                         trip.setAttraction(featureValue);
                         break;
+                    case "cenaMax":
+                        trip.setCost(featureValue);
+                        break;
+                    case "cenaMin":
+                        // TODO trip.setCost(featureValue);
+                        break;
+                    case "dniMin":
+                    	//trip.setHowMuchDays();
+                        break;
+                    case "dniMax":
+                        trip.setHowMuchDays(featureValue);
+                        break;
                     case "dojazd":
                         trip.setTransport(featureValue);
+                        break;
+                    case "zakwaterowanie":
+                        trip.setAccomodation(featureValue);
+                        break;
+                    case "wyzywienie":
+                        trip.setFeeding(featureValue);
                         break;
                 }
             }
