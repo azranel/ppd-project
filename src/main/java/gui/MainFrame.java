@@ -7,14 +7,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.JTextPane;
+import javax.swing.*;
 
 import prolog.asker.PrologAsker;
 
@@ -28,6 +21,7 @@ public class MainFrame extends JFrame {
 	public final static String DOESNT_MATTER = "nie wazne";
 	private JButton solutionButton;
 	private JTextPane resultsTextArea;
+	private JScrollPane resultsScrollPane;
 	private Map<String, JComboBox<String>> parametersLists;
 	private JTextField priceMin;
 	private JTextField priceMax;
@@ -83,10 +77,11 @@ public class MainFrame extends JFrame {
     private JPanel buildResultsPanel() {
     	JPanel resultsPanel = new JPanel();
     	resultsTextArea = new JTextPane();
+		resultsScrollPane = new JScrollPane(resultsTextArea);
     	
     	GridLayout layout = new GridLayout(2,1);
     	resultsPanel.setLayout(layout);
-    	resultsPanel.add(resultsTextArea);
+    	resultsPanel.add(resultsScrollPane);
     	resultsPanel.add(solutionButton);
     	resultsPanel.setBorder(BorderFactory.createTitledBorder("Rezultaty"));
 		return resultsPanel;
@@ -98,7 +93,7 @@ public class MainFrame extends JFrame {
     	Multimap<String, String> options = ArrayListMultimap.create();
     	options.putAll("atrakcje", Arrays.asList(DOESNT_MATTER, "zamek", "jezioro", "morze", "park rozrywki"));
     	options.putAll("kraj", Arrays.asList(DOESNT_MATTER, "polska", "niemcy", "rosja", "krym", "wielka brytania"));
-    	options.putAll("dojazd", Arrays.asList(DOESNT_MATTER, "pociag", "samochod", "samolot", "statek"));
+    	options.putAll("dojazd", Arrays.asList(DOESNT_MATTER, "autokar", "pociag", "samochod", "samolot", "prom"));
     	// TODO More options
     	
     	for(String parameter: options.keySet()) {
