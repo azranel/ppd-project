@@ -51,6 +51,19 @@ wycieczka(niemcy, berlin, miasto, zabytki, 3200, 14, samolot, all_inclusive, hot
 wycieczka(niemcy, monachium, miasto, zabytki, 2400, 10, samochod, all_inclusive, hotel).
 wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
 
+wycieczka(francja, nicea, miasto, morze, 2500, 5, samolot, all_inclusive, hotel).
+wycieczka('wielka brytania', londyn, miasto, 'park rozrywki', 1000, 3, autokar, brak, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+
 krajowa(M, R, A, K, D, T, W, Z) :- wycieczka(polska, M, R, A, K, D, T, W, Z).
 zagraniczna(M, R, A, K, D, T, W, Z) :- wycieczka(KR, M, R, A, K, D, T, W, Z), KR \= polska.
 
