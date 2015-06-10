@@ -1,11 +1,16 @@
 package prolog.asker;
 
+import com.google.common.base.Function;
+import com.google.common.collect.Collections2;
+import com.google.common.collect.FluentIterable;
+import com.google.common.collect.Iterables;
+import gui.MainFrame;
 import jpl.Query;
+import models.Trip;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Hashtable;
-import java.util.Map;
+import java.lang.reflect.Array;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by azranel on 09.06.15.
@@ -29,20 +34,61 @@ public class PrologAsker {
      */
 	public Collection<String> getResults(Map<String, String> data) {
 		Collection<String> results = new ArrayList<>();
-		
+
+        Trip trip = new Trip();
 		// TODO Get informations from Prolog. This is only example.
-		for(String feature: data.keySet())
-			results.add(feature + " -> " + data.get(feature));
-		
+		for(String feature: data.keySet()) {
+            String featureValue = data.get(feature);
+            if(!featureValue.equals(MainFrame.DOESNT_MATTER)) {
+                switch (feature) {
+                    case "kraj":
+                        trip.setCountry(featureValue);
+                        break;
+                    case "atrakcje":
+                        trip.setAttraction(featureValue);
+                        break;
+                    case "dojazd":
+                        trip.setTransport(featureValue);
+                        break;
+                }
+            }
+        }
+        Query query = trip.toQuery();
+        System.out.println(query.toString());
+        if(query.hasSolution()) {
+            Hashtable[] solutions = query.allSolutions();
+            for(Hashtable solution: solutions) {
+                Trip solut = new Trip(solution);
+                solut.copyValuesOf(trip);
+                results.add(solut.toString());
+                results.add("\n");
+            }
+        }
+
 		return results;
 	}
-    
+
+    private String[] mapKeysToStrings(Trip.KEYS[] input) {
+        final Collection<Trip.KEYS> keys =Arrays.asList(input);
+        String[] stringKeys = Collections2.transform(keys, new Function<Trip.KEYS, String>() {
+            @Override
+            public String apply(Trip.KEYS input) {
+                return input.toString();
+            }
+        }).toArray(new String[keys.size()]);
+        return stringKeys;
+    }
+
     //wycieczka(KR, M, R, A, K, D, T, W, Z)
     public void findByCountry(String countryName) {
         System.out.println("Looking for country...");
+
+        String[] allKeys = mapKeysToStrings(Trip.KEYS.values());
+        String[] keys = Arrays.copyOfRange(allKeys, 1, allKeys.length);
+
         Query query = new QueryBuilder("wycieczka")
                 .addNewAtom(countryName)
-                .addNewVariables("M", "R", "A", "K", "D", "T", "W", "Z")
+                .addNewVariables(keys)
                 .buildQuery();
 
         System.out.println(query.toString());
@@ -50,15 +96,9 @@ public class PrologAsker {
             System.out.println("Wycieczki do " + countryName);
             Hashtable[] solutions = query.allSolutions();
             for (Hashtable solution : solutions) {
-                String mValue = solution.get("M").toString();
-                String rValue = solution.get("R").toString();
-                String aValue = solution.get("A").toString();
-                String kValue = solution.get("K").toString();
-                String dValue = solution.get("D").toString();
-                String tValue = solution.get("T").toString();
-                String wValue = solution.get("W").toString();
-                String zValue = solution.get("Z").toString();
-                System.out.println("Wycieczka do " + mValue + ", rejon: " + rValue + ", atrakcje: " + aValue + ", koszt: " + kValue + ", na " + dValue + " dni, transport: " + tValue + ", wyzywienie: " + wValue + ", zakwaterowanie: " + zValue);
+                Trip trip = new Trip(solution);
+                trip.setCountry(countryName);
+                System.out.println(trip.toString());
             }
         } else
             System.out.println(BRAK);
@@ -66,26 +106,19 @@ public class PrologAsker {
 
     public void findByCity(String cityName) {
         System.out.println("Looking for city...");
-        Query query = new QueryBuilder("wycieczka")
-                .addNewVariable("KR")
-                .addNewAtom(cityName)
-                .addNewVariables("R", "A", "K", "D", "T", "W", "Z")
-                .buildQuery();
+        String[] allKeys = mapKeysToStrings(Trip.KEYS.values());
+
+        Query query = new QueryBuilder("wycieczka").addNewVariable(allKeys[0]).addNewAtom(cityName)
+                .addNewVariables(Arrays.copyOfRange(allKeys, 2, allKeys.length)).buildQuery();
 
         System.out.println(query.toString());
         if (query.hasSolution()) {
             System.out.println("Wycieczki do " + cityName);
             Hashtable[] solutions = query.allSolutions();
             for (Hashtable solution : solutions) {
-                String krValue = solution.get("KR").toString();
-                String rValue = solution.get("R").toString();
-                String aValue = solution.get("A").toString();
-                String kValue = solution.get("K").toString();
-                String dValue = solution.get("D").toString();
-                String tValue = solution.get("T").toString();
-                String wValue = solution.get("W").toString();
-                String zValue = solution.get("Z").toString();
-                System.out.println("Wycieczka do " + krValue + ", rejon: " + rValue + ", atrakcje: " + aValue + ", koszt: " + kValue + ", na " + dValue + " dni, transport: " + tValue + ", wyzywienie: " + wValue + ", zakwaterowanie: " + zValue);
+                Trip trip = new Trip(solution);
+                trip.setCity(cityName);
+                System.out.println(trip.toString());
             }
         } else
             System.out.println(BRAK);
@@ -93,26 +126,20 @@ public class PrologAsker {
 
     public void findByRegion(String regionName) {
         System.out.println("Looking for region...");
-        Query query = new QueryBuilder("wycieczka")
-                .addNewVariables("KR", "M")
-                .addNewAtom(regionName)
-                .addNewVariables("A", "K", "D", "T", "W", "Z")
-                .buildQuery();
+        String[] beforeKeys = mapKeysToStrings(Trip.KEYS.getRangeOfKeys(0, 2));
+        String[] afterKeys = mapKeysToStrings(Trip.KEYS.getRangeOfKeys(3, Trip.KEYS.values().length));
+        Query query = new QueryBuilder("wycieczka").addNewVariables(beforeKeys)
+                .addNewAtom(regionName).addNewVariables(afterKeys).buildQuery();
+
 
         System.out.println(query.toString());
         if (query.hasSolution()) {
             System.out.println("Wycieczki w region: " + regionName);
             Hashtable[] solutions = query.allSolutions();
             for (Hashtable solution : solutions) {
-                String krValue = solution.get("KR").toString();
-                String mValue = solution.get("M").toString();
-                String aValue = solution.get("A").toString();
-                String kValue = solution.get("K").toString();
-                String dValue = solution.get("D").toString();
-                String tValue = solution.get("T").toString();
-                String wValue = solution.get("W").toString();
-                String zValue = solution.get("Z").toString();
-                System.out.println("Wycieczka do " + mValue + "(" + krValue + "), atrakcje: " + aValue + ", koszt: " + kValue + ", na " + dValue + " dni, transport: " + tValue + ", wyzywienie: " + wValue + ", zakwaterowanie: " + zValue);
+                Trip trip = new Trip(solution);
+                trip.setRegion(regionName);
+                System.out.println(trip.toString());
             }
         } else
             System.out.println(BRAK);
@@ -120,26 +147,21 @@ public class PrologAsker {
 
     public void findByAttraction(String attractionName) {
         System.out.println("Looking for attraction...");
-        Query query = new QueryBuilder("wycieczka")
-                .addNewVariables("KR", "M", "R")
-                .addNewAtom(attractionName)
-                .addNewVariables("K", "D", "T", "W", "Z")
-                .buildQuery();
+
+        String[] beforeKeys = mapKeysToStrings(Trip.KEYS.getRangeOfKeys(0, 3));
+        String[] afterKeys = mapKeysToStrings(Trip.KEYS.getRangeOfKeys(4, Trip.KEYS.values().length));
+
+        Query query = new QueryBuilder("wycieczka").addNewVariables(beforeKeys).addNewAtom(attractionName)
+                .addNewVariables(afterKeys).buildQuery();
 
         System.out.println(query.toString());
         if (query.hasSolution()) {
             System.out.println("Wycieczki zawierajace atrakcje: " + attractionName);
             Hashtable[] solutions = query.allSolutions();
             for (Hashtable solution : solutions) {
-                String krValue = solution.get("KR").toString();
-                String mValue = solution.get("M").toString();
-                String rValue = solution.get("R").toString();
-                String kValue = solution.get("K").toString();
-                String dValue = solution.get("D").toString();
-                String tValue = solution.get("T").toString();
-                String wValue = solution.get("W").toString();
-                String zValue = solution.get("Z").toString();
-                System.out.println("Wycieczka do " + mValue + "(" + krValue + "), rejon: " + rValue + ", koszt: " + kValue + ", na " + dValue + " dni, transport: " + tValue + ", wyzywienie: " + wValue + ", zakwaterowanie: " + zValue);
+                Trip trip = new Trip(solution);
+                trip.setAttraction(attractionName);
+                System.out.println(trip.toString());
             }
         } else
             System.out.println(BRAK);
@@ -151,6 +173,8 @@ public class PrologAsker {
                 .addNewInteger(price)
                 .addNewVariables("KR", "M", "R", "A", "K", "D", "T", "W", "Z")
                 .buildQuery();
+
+
 
         System.out.println(query.toString());
         if (query.hasSolution()) {

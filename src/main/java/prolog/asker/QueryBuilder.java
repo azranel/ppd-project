@@ -2,6 +2,7 @@ package prolog.asker;
 
 import jpl.*;
 import jpl.Integer;
+import models.Trip;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -24,7 +25,7 @@ public class QueryBuilder {
     }
 
     public QueryBuilder addNewVariable(String variableName) {
-        queryTerms.add(new Variable(variableName));
+        queryTerms.add(new Variable(variableName.toString()));
         return this;
     }
 

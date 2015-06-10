@@ -25,7 +25,7 @@ import com.google.common.collect.Multimap;
  * Created by azranel on 09.06.15.
  */
 public class MainFrame extends JFrame {
-	
+	public final static String DOESNT_MATTER = "nie wazne";
 	private JButton solutionButton;
 	private JTextPane resultsTextArea;
 	private Map<String, JComboBox<String>> parametersLists;
@@ -96,9 +96,9 @@ public class MainFrame extends JFrame {
     	Map<String, JComboBox<String>> result = new HashMap<>();
     	
     	Multimap<String, String> options = ArrayListMultimap.create();
-    	options.putAll("atrakcje", Arrays.asList("zamek", "jezioro", "morze", "park rozrywki"));
-    	options.putAll("kraj", Arrays.asList("Polska", "Niemcy", "Rosja", "Krym", "Wielka Brytania"));
-    	options.putAll("dojazd", Arrays.asList("pociag", "samochod", "samolot", "statek"));
+    	options.putAll("atrakcje", Arrays.asList(DOESNT_MATTER, "zamek", "jezioro", "morze", "park rozrywki"));
+    	options.putAll("kraj", Arrays.asList(DOESNT_MATTER, "polska", "niemcy", "rosja", "krym", "wielka brytania"));
+    	options.putAll("dojazd", Arrays.asList(DOESNT_MATTER, "pociag", "samochod", "samolot", "statek"));
     	// TODO More options
     	
     	for(String parameter: options.keySet()) {
