@@ -1,18 +1,28 @@
 package gui;
 
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+
 
 import javax.swing.*;
 
+
+
 import prolog.asker.PrologAsker;
+
+
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
+import com.google.common.collect.MultimapBuilder;
 
 /**
  * Created by azranel on 09.06.15.
@@ -22,9 +32,19 @@ public class MainFrame extends JFrame {
 	private JButton solutionButton;
 	private JTextPane resultsTextArea;
 	private JScrollPane resultsScrollPane;
+	
 	private Map<String, JComboBox<String>> parametersLists;
+	private Multimap<String, String> citiesByCountry;
+	
+	@SuppressWarnings("Finally unused")
 	private JTextField priceMin;
+	
 	private JTextField priceMax;
+	
+	@SuppressWarnings("Finally unused")
+	private JTextField daysMin;
+	
+	private JTextField daysMax;
 	private PrologAsker prologAsker;
 	
     public MainFrame(PrologAsker prolog) {
@@ -36,8 +56,9 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         
+        citiesByCountry = buildCitiesByCountry();
         solutionButton = buildSolutionButton();
-        parametersLists = buildParametersLists();        
+        parametersLists = buildParametersLists();
         
         setLayout(new GridLayout());
         add(buildParametersPanel());
@@ -59,9 +80,28 @@ public class MainFrame extends JFrame {
         	listsPanel.add(innerPanel);
         }
         
+    	listsPanel.add(addPricesPanel());
+    	listsPanel.add(addDaysPanel());
+        
+		return listsPanel;
+	}
+
+    private JPanel addDaysPanel() {
+    	 daysMin = new JTextField();
+    	 daysMax = new JTextField();
+         JPanel dayePanel = new JPanel();
+         dayePanel.setLayout(new GridLayout(2,2));
+         dayePanel.add(new JLabel("Od: "));
+         dayePanel.add(daysMin);
+         dayePanel.add(new JLabel("Do: "));
+         dayePanel.add(daysMax);
+         dayePanel.setBorder(BorderFactory.createTitledBorder("Liczba dni:"));
+		return dayePanel;
+	}
+
+	private JPanel addPricesPanel() {
         priceMin = new JTextField();
         priceMax = new JTextField();
-        
         JPanel pricePanel = new JPanel();
         pricePanel.setLayout(new GridLayout(2,2));
         pricePanel.add(new JLabel("Od: "));
@@ -69,12 +109,10 @@ public class MainFrame extends JFrame {
         pricePanel.add(new JLabel("Do: "));
         pricePanel.add(priceMax);
         pricePanel.setBorder(BorderFactory.createTitledBorder("Cena"));
-    	listsPanel.add(pricePanel);
-        
-		return listsPanel;
+		return pricePanel;
 	}
 
-    private JPanel buildResultsPanel() {
+	private JPanel buildResultsPanel() {
     	JPanel resultsPanel = new JPanel();
     	resultsTextArea = new JTextPane();
 		resultsScrollPane = new JScrollPane(resultsTextArea);
@@ -93,7 +131,10 @@ public class MainFrame extends JFrame {
     	Multimap<String, String> options = ArrayListMultimap.create();
     	options.putAll("atrakcje", Arrays.asList(DOESNT_MATTER, "zamek", "jezioro", "morze", "park rozrywki"));
     	options.putAll("kraj", Arrays.asList(DOESNT_MATTER, "polska", "niemcy", "rosja", "krym", "wielka brytania"));
+    	options.putAll("miasto", Arrays.asList(DOESNT_MATTER));
     	options.putAll("dojazd", Arrays.asList(DOESNT_MATTER, "autokar", "pociag", "samochod", "samolot", "prom"));
+    	options.putAll("wyzywienie", Arrays.asList(DOESNT_MATTER, "brak", "sniadanie", "all_inclusive"));
+    	options.putAll("zakwaterowanie", Arrays.asList(DOESNT_MATTER, "brak", "hotel", "schronisko", "domek"));
     	// TODO More options
     	
     	for(String parameter: options.keySet()) {
@@ -106,6 +147,16 @@ public class MainFrame extends JFrame {
 			box.setVisible(true);
     		result.put(parameter, box);
     	}
+    	    	
+    	result.get("kraj").addActionListener( 
+    			e -> {
+    				Collection<String> cities = citiesByCountry.get( (String) result.get("kraj").getSelectedItem());
+    				// DefaultComboBoxModel needs String as array
+    				String[] temporaryCities = new String[cities.size()];
+    				citiesByCountry.get( (String) result.get("kraj").getSelectedItem()).toArray(temporaryCities);
+    				result.get("miasto").setModel(new DefaultComboBoxModel<String>(temporaryCities));
+    			}
+    	);
     	
 		return result;
 	}
@@ -133,6 +184,14 @@ public class MainFrame extends JFrame {
 			priceMax.getText().matches("\\d+(\\.\\d+)?")) 
 			properties.put("cenaMax", priceMax.getText());
 		
+		if(!daysMin.getText().isEmpty() &&
+				daysMin.getText().matches("\\d+")) 
+				properties.put("dniMin", priceMax.getText());
+		
+		if(!daysMax.getText().isEmpty() &&
+				daysMax.getText().matches("\\d+")) 
+				properties.put("dniMax", priceMax.getText());
+		
 		return properties;
 	}
 	
@@ -144,6 +203,21 @@ public class MainFrame extends JFrame {
 			builder.append(result + "\n");
 		
 		resultsTextArea.setText(builder.toString());
+	}
+	
+
+	private Multimap<String, String> buildCitiesByCountry() {
+		Multimap<String, String> cities = ArrayListMultimap.create();
+		
+		cities.putAll(DOESNT_MATTER, Arrays.<String>asList(DOESNT_MATTER));
+		cities.putAll("niemcy", Arrays.<String>asList("berlin", "hamburg", "dortmund", "strassburg"));
+		cities.putAll("polska", Arrays.<String>asList("warszawa", "zakopane", "torun", "gdansk", "swinoujscie",
+								"miedzyzdroje", "leba", "poznan", "szczecin", "olsztyn"));
+		cities.putAll("rosja", Arrays.<String>asList("moskwa", "petersburg", "wladywostok", "irkuck"));
+		cities.putAll("krym", Arrays.<String>asList("sewastopol"));
+		cities.putAll("wielka brytania", Arrays.<String>asList("londyn", "edynburg", "manchester", "birmingham", "nottigham"));
+		
+		return cities;
 	}
     
 }
