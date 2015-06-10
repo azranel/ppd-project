@@ -1,11 +1,13 @@
 package models;
 
 import com.google.common.base.Strings;
+import gui.MainFrame;
 import jpl.Query;
 import prolog.asker.QueryBuilder;
 
 import java.util.Arrays;
 import java.util.Hashtable;
+import java.util.Map;
 
 /**
  * Created by azranel on 10.06.15.
@@ -175,5 +177,47 @@ public class Trip {
             }
         }
         return builder.buildQuery();
+    }
+
+    public static Trip fromMap(Map<String, String> data) {
+        Trip trip = new Trip();
+        for (String feature : data.keySet()) {
+            String featureValue = data.get(feature);
+            if (!featureValue.equals(MainFrame.DOESNT_MATTER)) {
+                switch (feature) {
+                    case "kraj":
+                        trip.setCountry(featureValue);
+                        break;
+                    case "miasto":
+                        trip.setCity(featureValue);
+                        break;
+                    case "atrakcje":
+                        trip.setAttraction(featureValue);
+                        break;
+                    case "cenaMax":
+                        trip.setCost(featureValue);
+                        break;
+                    case "cenaMin":
+                        // TODO trip.setCost(featureValue);
+                        break;
+                    case "dniMin":
+                        //trip.setHowMuchDays();
+                        break;
+                    case "dniMax":
+                        trip.setHowMuchDays(featureValue);
+                        break;
+                    case "dojazd":
+                        trip.setTransport(featureValue);
+                        break;
+                    case "zakwaterowanie":
+                        trip.setAccomodation(featureValue);
+                        break;
+                    case "wyzywienie":
+                        trip.setFeeding(featureValue);
+                        break;
+                }
+            }
+        }
+        return trip;
     }
 }

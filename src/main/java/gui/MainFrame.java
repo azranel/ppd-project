@@ -133,7 +133,8 @@ public class MainFrame extends JFrame {
 
         Multimap<String, String> options = ArrayListMultimap.create();
         options.putAll("atrakcje", Arrays.asList(DOESNT_MATTER, "zamek", "jezioro", "morze", "park rozrywki"));
-        options.putAll("kraj", Arrays.asList(DOESNT_MATTER, "polska", "niemcy", "rosja", "krym", "wielka brytania"));
+        options.putAll("kraj",
+                Arrays.asList(DOESNT_MATTER, "polska", "niemcy", "rosja", "krym", "wielka brytania", "tunezja"));
         options.putAll("miasto", Arrays.asList(DOESNT_MATTER));
         options.putAll("dojazd", Arrays.asList(DOESNT_MATTER, "autokar", "pociag", "samochod", "samolot", "prom"));
         options.putAll("wyzywienie", Arrays.asList(DOESNT_MATTER, "brak", "sniadanie", "all_inclusive"));

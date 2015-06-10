@@ -30,45 +30,9 @@ public class PrologAsker {
     public Collection<String> getResults(Map<String, String> data) {
         Collection<String> results = new ArrayList<>();
 
-        Trip trip = new Trip();
+        Trip trip = Trip.fromMap(data);
         // TODO Get informations from Prolog. This is only example.
-        for (String feature : data.keySet()) {
-            String featureValue = data.get(feature);
-            if (!featureValue.equals(MainFrame.DOESNT_MATTER)) {
-                switch (feature) {
-                    case "kraj":
-                        trip.setCountry(featureValue);
-                        break;
-                    case "miasto":
-                        trip.setCity(featureValue);
-                        break;
-                    case "atrakcje":
-                        trip.setAttraction(featureValue);
-                        break;
-                    case "cenaMax":
-                        trip.setCost(featureValue);
-                        break;
-                    case "cenaMin":
-                        // TODO trip.setCost(featureValue);
-                        break;
-                    case "dniMin":
-                    	//trip.setHowMuchDays();
-                        break;
-                    case "dniMax":
-                        trip.setHowMuchDays(featureValue);
-                        break;
-                    case "dojazd":
-                        trip.setTransport(featureValue);
-                        break;
-                    case "zakwaterowanie":
-                        trip.setAccomodation(featureValue);
-                        break;
-                    case "wyzywienie":
-                        trip.setFeeding(featureValue);
-                        break;
-                }
-            }
-        }
+
         Query query = trip.toQuery();
         System.out.println(query.toString());
         if (query.hasSolution()) {
@@ -132,9 +96,9 @@ public class PrologAsker {
             System.out.println("Wycieczki do " + cityName);
             Hashtable[] solutions = query.allSolutions();
             for (Hashtable solution : solutions) {
-                Trip trip = new Trip(solution);
-                trip.setCity(cityName);
-                System.out.println(trip.toString());
+                Trip solut = new Trip(solution);
+                solut.setCity(cityName);
+                System.out.println(solut.toString());
             }
         } else
             System.out.println(BRAK);
