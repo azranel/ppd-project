@@ -126,7 +126,7 @@ public class MainFrame extends JFrame {
     	
     	GridBagConstraints c1 = new GridBagConstraints();
     	c1.gridx = 0; c1.gridy = 0;
-    	c1.ipady = 300; c1.ipadx = 300;
+    	c1.ipady = 300; c1.ipadx = 250;
     	resultsPanel.add(resultsScrollPane, c1);
     	
     	GridBagConstraints c2 = new GridBagConstraints();
@@ -142,7 +142,7 @@ public class MainFrame extends JFrame {
     	
     	Multimap<String, String> options = ArrayListMultimap.create();
     	options.putAll("atrakcje", Arrays.asList(DOESNT_MATTER, "zamek", "jezioro", "morze", "park rozrywki"));
-    	options.putAll("kraj", Arrays.asList(DOESNT_MATTER, "polska", "niemcy", "rosja", "krym", "wielka brytania"));
+    	options.putAll("kraj", Arrays.asList(DOESNT_MATTER, "polska", "niemcy", "rosja", "krym", "wielka brytania", "francja"));
     	options.putAll("miasto", Arrays.asList(DOESNT_MATTER));
     	options.putAll("dojazd", Arrays.asList(DOESNT_MATTER, "autokar", "pociag", "samochod", "samolot", "prom"));
     	options.putAll("wyzywienie", Arrays.asList(DOESNT_MATTER, "brak", "sniadanie", "all_inclusive"));
@@ -222,12 +222,13 @@ public class MainFrame extends JFrame {
 		Multimap<String, String> cities = ArrayListMultimap.create();
 		
 		cities.putAll(DOESNT_MATTER, Arrays.<String>asList(DOESNT_MATTER));
-		cities.putAll("niemcy", Arrays.<String>asList("berlin", "hamburg", "dortmund", "strassburg"));
-		cities.putAll("polska", Arrays.<String>asList("warszawa", "zakopane", "torun", "gdansk", "swinoujscie",
+		cities.putAll("niemcy", Arrays.<String>asList(DOESNT_MATTER, "berlin", "hamburg", "dortmund", "strassburg"));
+		cities.putAll("polska", Arrays.<String>asList(DOESNT_MATTER, "warszawa", "zakopane", "torun", "gdansk", "swinoujscie",
 								"miedzyzdroje", "leba", "poznan", "szczecin", "olsztyn"));
-		cities.putAll("rosja", Arrays.<String>asList("moskwa", "petersburg", "wladywostok", "irkuck"));
-		cities.putAll("krym", Arrays.<String>asList("sewastopol"));
-		cities.putAll("wielka brytania", Arrays.<String>asList("londyn", "edynburg", "manchester", "birmingham", "nottigham"));
+		cities.putAll("rosja", Arrays.<String>asList(DOESNT_MATTER, "moskwa", "petersburg", "wladywostok", "irkuck"));
+		cities.putAll("krym", Arrays.<String>asList(DOESNT_MATTER, "sewastopol"));
+		cities.putAll("wielka brytania", Arrays.<String>asList(DOESNT_MATTER, "londyn", "edynburg", "manchester", "birmingham", "nottigham"));
+		cities.putAll("francja", Arrays.<String>asList(DOESNT_MATTER, "paryz", "tuluza", "marsylia", "nicea", "bordeaux"));
 		
 		return cities;
 	}
