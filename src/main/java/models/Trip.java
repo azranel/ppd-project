@@ -1,5 +1,10 @@
 package models;
 
+import com.google.common.base.Strings;
+import com.sun.deploy.util.StringUtils;
+import jpl.Query;
+import prolog.asker.QueryBuilder;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Hashtable;
@@ -8,6 +13,10 @@ import java.util.Hashtable;
  * Created by azranel on 10.06.15.
  */
 public class Trip {
+    public Trip() {
+
+    }
+
     public String getCountry() {
         return country;
     }
@@ -90,6 +99,27 @@ public class Trip {
     private String feeding;
     private String accomodation;
 
+    public void copyValuesOf(Trip trip) {
+        if(!Strings.isNullOrEmpty(trip.country))
+            country = trip.country;
+        if(!Strings.isNullOrEmpty(trip.city))
+            city = trip.city;
+        if(!Strings.isNullOrEmpty(trip.region))
+            region = trip.region;
+        if(!Strings.isNullOrEmpty(trip.attraction))
+            attraction = trip.attraction;
+        if(!Strings.isNullOrEmpty(trip.cost))
+            cost = trip.cost;
+        if(!Strings.isNullOrEmpty(trip.howMuchDays))
+            howMuchDays = trip.howMuchDays;
+        if(!Strings.isNullOrEmpty(trip.transport))
+            transport = trip.transport;
+        if(!Strings.isNullOrEmpty(trip.feeding))
+            feeding = trip.feeding;
+        if(!Strings.isNullOrEmpty(trip.accomodation))
+            accomodation = trip.accomodation;
+    }
+
     public enum KEYS {
         COUNTRY,
         CITY,
@@ -115,8 +145,8 @@ public class Trip {
         city = tripData.getOrDefault(KEYS.CITY.toString(), "").toString();
         region = tripData.getOrDefault(KEYS.REGION.toString(), "").toString();
         attraction = tripData.getOrDefault(KEYS.ATTRACTION.toString(), "").toString();
-        cost = tripData.getOrDefault(KEYS.COST.toString(), "0").toString();
-        howMuchDays = tripData.getOrDefault(KEYS.DAYSLONG.toString(), "0").toString();
+        cost = tripData.getOrDefault(KEYS.COST.toString(), "").toString();
+        howMuchDays = tripData.getOrDefault(KEYS.DAYSLONG.toString(), "").toString();
         transport = tripData.getOrDefault(KEYS.TRANSPORT.toString(), "").toString();
         feeding = tripData.getOrDefault(KEYS.FEEDING.toString(), "").toString();
         accomodation = tripData.getOrDefault(KEYS.ACCOMODATION.toString(), "").toString();
@@ -129,5 +159,23 @@ public class Trip {
                 ", koszt: " + cost + ", na " + howMuchDays +
                 " dni, transport: " + transport + ", wyzywienie: " +
                 feeding + ", zakwaterowanie: " + accomodation;
+    }
+
+    public Query toQuery() {
+        QueryBuilder builder = new QueryBuilder("wycieczka");
+        String[] values = new String[] { country, city, region, attraction, cost,
+                howMuchDays, transport, feeding, accomodation};
+        KEYS[] keys = KEYS.values();
+        for(int i = 0; i < values.length; i++) {
+            if(Strings.isNullOrEmpty(values[i]))
+                builder.addNewVariable(keys[i].toString());
+            else {
+                if(values[i].equals(cost) || values[i].equals(howMuchDays))
+                    builder.addNewInteger(Integer.valueOf(values[i]));
+                else
+                    builder.addNewAtom(values[i]);
+            }
+        }
+        return builder.buildQuery();
     }
 }

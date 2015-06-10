@@ -4,6 +4,7 @@ import com.google.common.base.Function;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.Iterables;
+import gui.MainFrame;
 import jpl.Query;
 import models.Trip;
 
@@ -33,11 +34,37 @@ public class PrologAsker {
      */
 	public Collection<String> getResults(Map<String, String> data) {
 		Collection<String> results = new ArrayList<>();
-		
+
+        Trip trip = new Trip();
 		// TODO Get informations from Prolog. This is only example.
-		for(String feature: data.keySet())
-			results.add(feature + " -> " + data.get(feature));
-		
+		for(String feature: data.keySet()) {
+            String featureValue = data.get(feature);
+            if(!featureValue.equals(MainFrame.DOESNT_MATTER)) {
+                switch (feature) {
+                    case "kraj":
+                        trip.setCountry(featureValue);
+                        break;
+                    case "atrakcje":
+                        trip.setAttraction(featureValue);
+                        break;
+                    case "dojazd":
+                        trip.setTransport(featureValue);
+                        break;
+                }
+            }
+        }
+        Query query = trip.toQuery();
+        System.out.println(query.toString());
+        if(query.hasSolution()) {
+            Hashtable[] solutions = query.allSolutions();
+            for(Hashtable solution: solutions) {
+                Trip solut = new Trip(solution);
+                solut.copyValuesOf(trip);
+                results.add(solut.toString());
+                results.add("\n");
+            }
+        }
+
 		return results;
 	}
 
