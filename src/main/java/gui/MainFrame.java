@@ -33,7 +33,7 @@ import prolog.asker.PrologAsker;
  * Created by azranel on 09.06.15.
  */
 public class MainFrame extends JFrame {
-	public final static String DOESNT_MATTER = "nie wazne";
+	public final static String DOESNT_MATTER = "niewazne";
 	private JButton solutionButton;
 	private JTextPane resultsTextArea;
 	private JScrollPane resultsScrollPane;
