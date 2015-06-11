@@ -125,7 +125,7 @@ public class MainFrame extends JFrame {
     	
     	GridBagConstraints c1 = new GridBagConstraints();
     	c1.gridx = 0; c1.gridy = 0;
-    	c1.ipady = 300; c1.ipadx = 250;
+    	c1.ipady = 350; c1.ipadx = 300;
     	resultsPanel.add(resultsScrollPane, c1);
     	
     	GridBagConstraints c2 = new GridBagConstraints();
