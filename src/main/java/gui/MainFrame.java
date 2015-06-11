@@ -5,6 +5,7 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.MultimapBuilder;
 
+import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -16,6 +17,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 
 
@@ -119,19 +121,10 @@ public class MainFrame extends JFrame {
     	JPanel resultsPanel = new JPanel();
     	resultsTextArea = new JTextPane();
 		resultsScrollPane = new JScrollPane(resultsTextArea);
-    	
-    	GridBagLayout layout = new GridBagLayout();
+		BorderLayout layout = new BorderLayout();
     	resultsPanel.setLayout(layout);
-    	
-    	GridBagConstraints c1 = new GridBagConstraints();
-    	c1.gridx = 0; c1.gridy = 0;
-    	c1.ipady = 300; c1.ipadx = 250;
-    	resultsPanel.add(resultsScrollPane, c1);
-    	
-    	GridBagConstraints c2 = new GridBagConstraints();
-    	c2.gridx = 0; c2.gridy = 2;
-    	resultsPanel.add(solutionButton, c2);
-    	
+    	resultsPanel.add(resultsScrollPane, BorderLayout.CENTER);
+    	resultsPanel.add(solutionButton, BorderLayout.SOUTH);
     	resultsPanel.setBorder(BorderFactory.createTitledBorder("Rezultaty"));
 		return resultsPanel;
 	}
@@ -140,15 +133,15 @@ public class MainFrame extends JFrame {
     	Map<String, JComboBox<String>> result = new HashMap<>();
     	
     	Multimap<String, String> options = ArrayListMultimap.create();
-    	options.putAll("atrakcje", Arrays.asList(DOESNT_MATTER, "zamek", "jezioro", "morze", "park rozrywki", "plaza", "brama"));
     	options.putAll("kraj",
-                Arrays.asList(DOESNT_MATTER, "polska", "niemcy", "rosja",
-                        "wielka brytania", "francja", "tunezja"));
-    	options.putAll("miasto", Arrays.asList(DOESNT_MATTER));
-    	options.putAll("rejon", Arrays.asList(DOESNT_MATTER, "morze", "miasto", "wies", "pustynia", "gory", "wyspa"));
-    	options.putAll("dojazd", Arrays.asList(DOESNT_MATTER, "autokar", "pociag", "samochod", "samolot", "prom"));
+                Arrays.asList(DOESNT_MATTER, "czechy", "francja", "islandia", "niemcy", "norwegia", "polska",
+						"portugalia", "rosja", "tunezja", "turcja", "wielka brytania", "wlochy"));
+		options.putAll("miasto", Arrays.asList(DOESNT_MATTER));
+		options.putAll("rejon", Arrays.asList(DOESNT_MATTER, "gory", "miasto", "morze", "wyspa"));
+		options.putAll("atrakcje", Arrays.asList(DOESNT_MATTER, "morze", "natura", "park rozrywki", "plaza", "wieza", "winnice", "zabytki", "zamek"));
+		options.putAll("dojazd", Arrays.asList(DOESNT_MATTER,"autokar", "pociag", "prom", "samolot", "wlasny"));
     	options.putAll("wyzywienie", Arrays.asList(DOESNT_MATTER, "brak", "sniadanie", "all inclusive"));
-    	options.putAll("zakwaterowanie", Arrays.asList(DOESNT_MATTER, "brak", "hotel", "schronisko", "domek"));
+    	options.putAll("zakwaterowanie", Arrays.asList(DOESNT_MATTER, "brak", "domek", "hotel", "osrodek", "schronisko"));
     	// TODO More options
     	
     	for(String parameter: options.keySet()) {
@@ -233,15 +226,19 @@ public class MainFrame extends JFrame {
 		Multimap<String, String> cities = ArrayListMultimap.create();
 		
 		cities.putAll(DOESNT_MATTER, Arrays.<String>asList(DOESNT_MATTER));
-		cities.putAll("niemcy", Arrays.<String>asList(DOESNT_MATTER, "berlin", "hamburg", "dortmund", "strassburg"));
-		cities.putAll("polska", Arrays.<String>asList(DOESNT_MATTER, "warszawa", "zakopane", "torun", "gdansk", "swinoujscie",
-								"miedzyzdroje", "leba", "poznan", "szczecin", "gniezno", "olsztyn"));
-		cities.putAll("rosja", Arrays.<String>asList(DOESNT_MATTER, "moskwa", "petersburg", "wladywostok", "irkuck"));
-		cities.putAll("krym", Arrays.<String>asList(DOESNT_MATTER, "sewastopol"));
-		cities.putAll("wielka brytania", Arrays.<String>asList(DOESNT_MATTER, "londyn", "edynburg", "manchester", "birmingham", "nottigham"));
-		cities.putAll("francja", Arrays.<String>asList(DOESNT_MATTER, "paryz", "tuluza", "marsylia", "nicea", "bordeaux"));
-		cities.putAll("tunezja", Arrays.<String>asList(DOESNT_MATTER, "tunis", "nabul", "kabis"));
-		
+		cities.putAll("czechy", Arrays.<String>asList(DOESNT_MATTER, "praga"));
+		cities.putAll("francja", Arrays.<String>asList(DOESNT_MATTER, "paryz", "nicea", "marsylia"));
+		cities.putAll("islandia", Arrays.<String>asList(DOESNT_MATTER, "reikjavik"));
+		cities.putAll("niemcy", Arrays.<String>asList(DOESNT_MATTER, "berlin", "monachium"));
+		cities.putAll("norwegia", Arrays.<String>asList(DOESNT_MATTER, "oslo"));
+		cities.putAll("polska", Arrays.<String>asList(DOESNT_MATTER, "zakopane", "torun", "gniezno", "swinoujscie"));
+		cities.putAll("portugalia", Arrays.<String>asList(DOESNT_MATTER, "azory"));
+		cities.putAll("rosja", Arrays.<String>asList(DOESNT_MATTER, "kaliningrad", "moskwa"));
+		cities.putAll("tunezja", Arrays.<String>asList(DOESNT_MATTER, "nabul", "kabis"));
+		cities.putAll("turcja", Arrays.<String>asList(DOESNT_MATTER, "bodrum", "kusadasi"));
+		cities.putAll("wielka brytania", Arrays.<String>asList(DOESNT_MATTER, "londyn"));
+		cities.putAll("wlochy", Arrays.<String>asList(DOESNT_MATTER, "mediolan"));
+
 		return cities;
 	}
     
