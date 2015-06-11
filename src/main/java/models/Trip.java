@@ -58,12 +58,44 @@ public class Trip {
         this.cost = cost;
     }
 
+    public String getCostMin() {
+        return costMin;
+    }
+
+    public void setCostMin(String cost) {
+        this.costMin = cost;
+    }
+
+    public String getCostMax() {
+        return costMax;
+    }
+
+    public void setCostMax(String cost) {
+        this.costMax = cost;
+    }
+
     public String getHowMuchDays() {
         return howMuchDays;
     }
 
     public void setHowMuchDays(String howMuchDays) {
         this.howMuchDays = howMuchDays;
+    }
+
+    public String getHowMuchDaysMin() {
+        return howMuchDaysMin;
+    }
+
+    public void setHowMuchDaysMin(String howMuchDays) {
+        this.howMuchDaysMin = howMuchDays;
+    }
+
+    public String getHowMuchDaysMax() {
+        return howMuchDaysMax;
+    }
+
+    public void setHowMuchDaysMax(String howMuchDays) {
+        this.howMuchDaysMax = howMuchDays;
     }
 
     public String getTransport() {
@@ -95,7 +127,11 @@ public class Trip {
     private String region;
     private String attraction;
     private String cost;
+    private String costMin;
+    private String costMax;
     private String howMuchDays;
+    private String howMuchDaysMin;
+    private String howMuchDaysMax;
     private String transport;
     private String feeding;
     private String accomodation;
@@ -111,8 +147,30 @@ public class Trip {
             attraction = trip.attraction;
         if (!Strings.isNullOrEmpty(trip.cost))
             cost = trip.cost;
+
+        if (!Strings.isNullOrEmpty(trip.costMin))
+            costMin = trip.costMin;
+        else
+            costMin = "0";
+
+        if (!Strings.isNullOrEmpty(trip.costMax))
+            costMax = trip.costMax;
+        else
+            costMax = Integer.toString(Integer.MAX_VALUE);
+
         if (!Strings.isNullOrEmpty(trip.howMuchDays))
             howMuchDays = trip.howMuchDays;
+
+        if (!Strings.isNullOrEmpty(trip.howMuchDaysMin))
+            howMuchDaysMin = trip.howMuchDaysMin;
+        else
+            howMuchDaysMin = "1";
+
+        if (!Strings.isNullOrEmpty(trip.howMuchDaysMax))
+            howMuchDaysMax = trip.howMuchDaysMax;
+        else
+            howMuchDaysMax = Integer.toString(Integer.MAX_VALUE);
+
         if (!Strings.isNullOrEmpty(trip.transport))
             transport = trip.transport;
         if (!Strings.isNullOrEmpty(trip.feeding))
@@ -127,7 +185,11 @@ public class Trip {
         REGION,
         ATTRACTION,
         COST,
-        DAYSLONG,
+        COST_MIN,
+        COST_MAX,
+        DAYS_LONG,
+        DAYS_LONG_MIN,
+        DAYS_LONG_MAX,
         TRANSPORT,
         FEEDING,
         ACCOMODATION;
@@ -147,7 +209,11 @@ public class Trip {
         region = tripData.getOrDefault(KEYS.REGION.toString(), "").toString();
         attraction = tripData.getOrDefault(KEYS.ATTRACTION.toString(), "").toString();
         cost = tripData.getOrDefault(KEYS.COST.toString(), "").toString();
-        howMuchDays = tripData.getOrDefault(KEYS.DAYSLONG.toString(), "").toString();
+        costMin = tripData.getOrDefault(KEYS.COST_MIN.toString(), "0").toString();
+        costMax = tripData.getOrDefault(KEYS.COST_MAX.toString(), Integer.toString(Integer.MAX_VALUE)).toString();
+        howMuchDays = tripData.getOrDefault(KEYS.DAYS_LONG.toString(), "").toString();
+        howMuchDaysMin = tripData.getOrDefault(KEYS.DAYS_LONG_MIN.toString(), "1").toString();
+        howMuchDaysMax = tripData.getOrDefault(KEYS.DAYS_LONG_MAX.toString(), Integer.toString(Integer.MAX_VALUE)).toString();
         transport = tripData.getOrDefault(KEYS.TRANSPORT.toString(), "").toString();
         feeding = tripData.getOrDefault(KEYS.FEEDING.toString(), "").toString();
         accomodation = tripData.getOrDefault(KEYS.ACCOMODATION.toString(), "").toString();
@@ -163,15 +229,15 @@ public class Trip {
     }
 
     public Query toQuery() {
-        QueryBuilder builder = new QueryBuilder("wycieczka");
-        String[] values = new String[]{country, city, region, attraction, cost,
-                howMuchDays, transport, feeding, accomodation};
+        QueryBuilder builder = new QueryBuilder("znajdz_wycieczke");
+        String[] values = new String[]{country, city, region, attraction, cost, costMin, costMax,
+                howMuchDays, howMuchDaysMin, howMuchDaysMax, transport, feeding, accomodation};
         KEYS[] keys = KEYS.values();
         for (int i = 0; i < values.length; i++) {
             if (Strings.isNullOrEmpty(values[i]))
                 builder.addNewVariable(keys[i].toString());
             else {
-                if (values[i].equals(cost) || values[i].equals(howMuchDays))
+                if (values[i].equals(cost) || values[i].equals(costMin) || values[i].equals(costMax) || values[i].equals(howMuchDays) || values[i].equals(howMuchDaysMin) || values[i].equals(howMuchDaysMax))
                     builder.addNewInteger(Integer.valueOf(values[i]));
                 else {
                     String value = values[i].replace(' ', '_');
@@ -197,17 +263,17 @@ public class Trip {
                     case "atrakcje":
                         trip.setAttraction(featureValue);
                         break;
-                    case "cenaMax":
-                        trip.setCost(featureValue);
-                        break;
                     case "cenaMin":
-                        // TODO trip.setCost(featureValue);
+                        trip.setCostMin(featureValue);
+                        break;
+                    case "cenaMax":
+                        trip.setCostMax(featureValue);
                         break;
                     case "dniMin":
-                        //trip.setHowMuchDays();
+                        trip.setHowMuchDaysMin(featureValue);
                         break;
                     case "dniMax":
-                        trip.setHowMuchDays(featureValue);
+                        trip.setHowMuchDaysMax(featureValue);
                         break;
                     case "dojazd":
                         trip.setTransport(featureValue);

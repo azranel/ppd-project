@@ -74,3 +74,5 @@ cena_max(X, Y, KR, M, R, A, K, D, T, W, Z) :- wycieczka(KR, M, R, A, K, D, T, W,
 dluzsza_niz(X, KR, M, R, A, K, D, T, W, Z) :- wycieczka(KR, M, R, A, K, D, T, W, Z), X > D.
 krotsza_niz(X, KR, M, R, A, K, D, T, W, Z) :- wycieczka(KR, M, R, A, K, D, T, W, Z), X < D.
 conajmniej(X, KR, M, R, A, K, D, T, W, Z) :- wycieczka(KR, M, R, A, K, D, T, W, Z), X >= D.
+
+znajdz_wycieczke(KR, M, R, A, K, K_MIN, K_MAX, D, D_MIN, D_MAX, T, W, Z) :- wycieczka(KR, M, R, A, K, D, T, W, Z), K >= K_MIN, K =< K_MAX, D >= D_MIN, D =< D_MAX.

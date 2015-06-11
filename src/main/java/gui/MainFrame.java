@@ -192,18 +192,27 @@ public class MainFrame extends JFrame {
 		if(!priceMin.getText().isEmpty() &&
 			priceMin.getText().matches("\\d+(\\.\\d+)?")) 
 			properties.put("cenaMin", priceMin.getText());
+
+		else
+			properties.put("cenaMin", "0");
 		
 		if(!priceMax.getText().isEmpty() &&
 			priceMax.getText().matches("\\d+(\\.\\d+)?")) 
 			properties.put("cenaMax", priceMax.getText());
+		else
+			properties.put("cenaMax", Integer.toString(Integer.MAX_VALUE));
 		
 		if(!daysMin.getText().isEmpty() &&
 				daysMin.getText().matches("\\d+")) 
 				properties.put("dniMin", daysMin.getText());
+		else
+			properties.put("dniMin", "1");
 		
 		if(!daysMax.getText().isEmpty() &&
 				daysMax.getText().matches("\\d+")) 
 				properties.put("dniMax", daysMax.getText());
+		else
+			properties.put("dniMax", Integer.toString(Integer.MAX_VALUE));
 		
 		return properties;
 	}
