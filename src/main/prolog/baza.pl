@@ -65,10 +65,10 @@ wycieczka(polska, swinoujscie, morze, plaza, 3400, 7, autokar, all_inclusive, ho
 wycieczka(polska, gniezno, miasto, brama, 100, 1, autokar, brak, brak).
 wycieczka(polska, gniezno, miasto, brama, 200, 2, wlasny, brak, osrodek).
 wycieczka(polska, gniezno, miasto, brama, 300, 2, wlasny, sniadanie, osrodek).
-wycieczka(polska, zakopane, miasto, gory, 1000, 7, pociag, all_inclusive, hotel).
-wycieczka(polska, zakopane, miasto, gory, 1100, 7, wlasny, all_inclusive, hotel).
-wycieczka(polska, zakopane, miasto, gory, 1200, 10, pociag, all_inclusive, hotel).
-wycieczka(polska, zakopane, miasto, gory, 1400, 10, wlasny, all_inclusive, hotel).
+wycieczka(polska, zakopane, gory, natura, 1000, 7, pociag, all_inclusive, hotel).
+wycieczka(polska, zakopane, gory, natura, 1100, 7, wlasny, all_inclusive, hotel).
+wycieczka(polska, zakopane, gory, natura, 1200, 10, pociag, all_inclusive, hotel).
+wycieczka(polska, zakopane, gory, natura, 1400, 10, wlasny, all_inclusive, hotel).
 
 wycieczka(portugalia, azory, wyspa, plaza, 6000, 8, samolot, sniadanie, hotel).
 wycieczka(portugalia, azory, wyspa, plaza, 6800, 8, samolot, all_inclusive, hotel).
