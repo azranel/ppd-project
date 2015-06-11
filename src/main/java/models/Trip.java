@@ -219,13 +219,16 @@ public class Trip {
         accomodation = tripData.getOrDefault(KEYS.ACCOMODATION.toString(), "").toString();
     }
 
+    private String capitalize(String word) {
+        return word.substring(0, 1).toUpperCase() + word.substring(1);
+    }
+
     @Override
     public String toString() {
-        return "Wycieczka do " + city + " w " + country +
-                ", rejon " + region + ", atrakcje: " + attraction +
-                ", koszt: " + cost + ", na " + howMuchDays +
-                " dni, transport: " + transport + ", wyzywienie: " +
-                feeding + ", zakwaterowanie: " + accomodation;
+        return "Wycieczka do " + capitalize(city) + " (" + capitalize(country) + ")" +
+                " w rejon " + region + " na " + howMuchDays + " dni.\nAtrakcje: " + attraction +
+                "\nTransport: " + transport + "\nZakwaterowanie: " + accomodation + "\nWyzywienie: " +
+                feeding + "\nkoszt: " + cost;
     }
 
     public Query toQuery() {
