@@ -287,6 +287,9 @@ public class Trip {
                     case "wyzywienie":
                         trip.setFeeding(featureValue);
                         break;
+                    case "rejon":
+                        trip.setRegion(featureValue);
+                        break;
                 }
             }
         }
