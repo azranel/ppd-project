@@ -11,6 +11,8 @@ wycieczka(czechy, praga, miasto, zabytki, 6200, 14, autokar, all_inclusive, hote
 
 wycieczka(francja, nicea, miasto, morze, 2500, 5, samolot, all_inclusive, hotel).
 wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, paryz, miasto, wieza, 1700, 2, samolot, all_inclusive, hotel).
+wycieczka(francja, marsylia, miasto, plaza, 2500, 2, samolot, all_inclusive, hotel).
 wycieczka(francja, marsylia, miasto, winnice, 3500, 5, autokar, sniadanie, domek).
 wycieczka(francja, marsylia, miasto, winnice, 4700, 5, samolot, sniadanie, domek).
 wycieczka(francja, marsylia, miasto, winnice, 6400, 5, samolot, all_inclusive, hotel).
@@ -77,6 +79,7 @@ wycieczka(rosja, kaliningrad, miasto, zabytki, 2500, 5, autokar, sniadanie, hote
 wycieczka(rosja, kaliningrad, miasto, zabytki, 3000, 5, autokar, all_inclusive, hotel).
 wycieczka(rosja, kaliningrad, miasto, zabytki, 3500, 8, autokar, sniadanie, hotel).
 wycieczka(rosja, kaliningrad, miasto, zabytki, 4500, 8, autokar, all_inclusive, hotel).
+wycieczka(rosja, moskwa, miasto, park_rozrywki, 1000, 4, pociag, sniadanie, hotel).
 
 wycieczka(tunezja, nabul, morze, plaza, 1700, 11, samolot, sniadanie, hotel).
 wycieczka(tunezja, nabul, morze, plaza, 1300, 7, samolot, sniadanie, hotel).
