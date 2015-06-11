@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca771658-23c4-4c71-9add-9d74544d5898" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" afterPath="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/prolog/baza.pl" afterPath="$PROJECT_DIR$/src/main/prolog/baza.pl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java" afterPath="$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java" />
     </list>
     <ignored path="ppd-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,6 +31,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="e#290#291#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="baza.pl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/prolog/baza.pl">
           <provider selected="true" editor-type-id="text-editor">
@@ -40,27 +53,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/gui/MainFrame.java">
+      <file leaf-file-name="PrologAsker.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.8118812">
-              <caret line="149" column="66" selection-start-line="149" selection-start-column="66" selection-end-line="149" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.3630363">
+              <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7630#7638#0" expanded="true" />
-                <element signature="e#7695#7703#0" expanded="true" />
-                <element signature="e#7770#7778#0" expanded="true" />
-                <element signature="e#7867#7875#0" expanded="true" />
-                <element signature="e#7945#7953#0" expanded="true" />
-                <element signature="e#8035#8043#0" expanded="true" />
-                <element signature="e#8108#8116#0" expanded="true" />
-                <element signature="e#8224#8232#0" expanded="true" />
-                <element signature="e#8297#8305#0" expanded="true" />
-                <element signature="e#8388#8396#0" expanded="true" />
-                <element signature="e#8471#8479#0" expanded="true" />
-                <element signature="e#8567#8575#0" expanded="true" />
-                <element signature="e#8642#8650#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gui/MainFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="115" column="3" selection-start-line="115" selection-start-column="3" selection-end-line="115" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7931#7939#0" expanded="true" />
+                <element signature="e#8002#8010#0" expanded="true" />
+                <element signature="e#8083#8091#0" expanded="true" />
+                <element signature="e#8186#8194#0" expanded="true" />
+                <element signature="e#8270#8278#0" expanded="true" />
+                <element signature="e#8366#8374#0" expanded="true" />
+                <element signature="e#8445#8453#0" expanded="true" />
+                <element signature="e#8567#8575#0" expanded="true" />
+                <element signature="e#8646#8654#0" expanded="true" />
+                <element signature="e#8743#8751#0" expanded="true" />
+                <element signature="e#8832#8840#0" expanded="true" />
+                <element signature="e#8934#8942#0" expanded="true" />
+                <element signature="e#9015#9023#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/prolog/asker/QueryBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,11 +134,11 @@
         <option value="$PROJECT_DIR$/src/main/java/models/TripToQueryFactory.java" />
         <option value="$PROJECT_DIR$/.idea/compiler.xml" />
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/prolog/asker/QueryBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Trip.java" />
         <option value="$PROJECT_DIR$/src/main/prolog/baza.pl" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" />
       </list>
     </option>
@@ -661,7 +696,7 @@
       <workItem from="1433969440171" duration="136000" />
       <workItem from="1433974644590" duration="2363000" />
       <workItem from="1433979465171" duration="919000" />
-      <workItem from="1434005981304" duration="10675000" />
+      <workItem from="1434005981304" duration="10835000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/azranel/ppd-project&#10;&#10;Conflicts:&#10;&#9;src/main/java/gui/MainFrame.java&#10;">
       <created>1433979647137</created>
@@ -673,7 +708,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40363000" />
+    <option name="totallyTimeSpent" value="40523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="25" width="958" height="1054" extended-state="4" />
@@ -690,7 +725,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3258786" sideWeight="0.49361023" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24760383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24672489" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -814,19 +849,19 @@
           <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7630#7638#0" expanded="true" />
-            <element signature="e#7695#7703#0" expanded="true" />
-            <element signature="e#7770#7778#0" expanded="true" />
-            <element signature="e#7867#7875#0" expanded="true" />
-            <element signature="e#7945#7953#0" expanded="true" />
-            <element signature="e#8035#8043#0" expanded="true" />
-            <element signature="e#8108#8116#0" expanded="true" />
-            <element signature="e#8224#8232#0" expanded="true" />
-            <element signature="e#8297#8305#0" expanded="true" />
-            <element signature="e#8388#8396#0" expanded="true" />
-            <element signature="e#8471#8479#0" expanded="true" />
+            <element signature="e#7931#7939#0" expanded="true" />
+            <element signature="e#8002#8010#0" expanded="true" />
+            <element signature="e#8083#8091#0" expanded="true" />
+            <element signature="e#8186#8194#0" expanded="true" />
+            <element signature="e#8270#8278#0" expanded="true" />
+            <element signature="e#8366#8374#0" expanded="true" />
+            <element signature="e#8445#8453#0" expanded="true" />
             <element signature="e#8567#8575#0" expanded="true" />
-            <element signature="e#8642#8650#0" expanded="true" />
+            <element signature="e#8646#8654#0" expanded="true" />
+            <element signature="e#8743#8751#0" expanded="true" />
+            <element signature="e#8832#8840#0" expanded="true" />
+            <element signature="e#8934#8942#0" expanded="true" />
+            <element signature="e#9015#9023#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -896,19 +931,19 @@
           <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7630#7638#0" expanded="true" />
-            <element signature="e#7695#7703#0" expanded="true" />
-            <element signature="e#7770#7778#0" expanded="true" />
-            <element signature="e#7867#7875#0" expanded="true" />
-            <element signature="e#7945#7953#0" expanded="true" />
-            <element signature="e#8035#8043#0" expanded="true" />
-            <element signature="e#8108#8116#0" expanded="true" />
-            <element signature="e#8224#8232#0" expanded="true" />
-            <element signature="e#8297#8305#0" expanded="true" />
-            <element signature="e#8388#8396#0" expanded="true" />
-            <element signature="e#8471#8479#0" expanded="true" />
+            <element signature="e#7931#7939#0" expanded="true" />
+            <element signature="e#8002#8010#0" expanded="true" />
+            <element signature="e#8083#8091#0" expanded="true" />
+            <element signature="e#8186#8194#0" expanded="true" />
+            <element signature="e#8270#8278#0" expanded="true" />
+            <element signature="e#8366#8374#0" expanded="true" />
+            <element signature="e#8445#8453#0" expanded="true" />
             <element signature="e#8567#8575#0" expanded="true" />
-            <element signature="e#8642#8650#0" expanded="true" />
+            <element signature="e#8646#8654#0" expanded="true" />
+            <element signature="e#8743#8751#0" expanded="true" />
+            <element signature="e#8832#8840#0" expanded="true" />
+            <element signature="e#8934#8942#0" expanded="true" />
+            <element signature="e#9015#9023#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1006,19 +1041,19 @@
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7630#7638#0" expanded="true" />
-            <element signature="e#7695#7703#0" expanded="true" />
-            <element signature="e#7770#7778#0" expanded="true" />
-            <element signature="e#7867#7875#0" expanded="true" />
-            <element signature="e#7945#7953#0" expanded="true" />
-            <element signature="e#8035#8043#0" expanded="true" />
-            <element signature="e#8108#8116#0" expanded="true" />
-            <element signature="e#8224#8232#0" expanded="true" />
-            <element signature="e#8297#8305#0" expanded="true" />
-            <element signature="e#8388#8396#0" expanded="true" />
-            <element signature="e#8471#8479#0" expanded="true" />
+            <element signature="e#7931#7939#0" expanded="true" />
+            <element signature="e#8002#8010#0" expanded="true" />
+            <element signature="e#8083#8091#0" expanded="true" />
+            <element signature="e#8186#8194#0" expanded="true" />
+            <element signature="e#8270#8278#0" expanded="true" />
+            <element signature="e#8366#8374#0" expanded="true" />
+            <element signature="e#8445#8453#0" expanded="true" />
             <element signature="e#8567#8575#0" expanded="true" />
-            <element signature="e#8642#8650#0" expanded="true" />
+            <element signature="e#8646#8654#0" expanded="true" />
+            <element signature="e#8743#8751#0" expanded="true" />
+            <element signature="e#8832#8840#0" expanded="true" />
+            <element signature="e#8934#8942#0" expanded="true" />
+            <element signature="e#9015#9023#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1053,19 +1088,19 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7630#7638#0" expanded="true" />
-            <element signature="e#7695#7703#0" expanded="true" />
-            <element signature="e#7770#7778#0" expanded="true" />
-            <element signature="e#7867#7875#0" expanded="true" />
-            <element signature="e#7945#7953#0" expanded="true" />
-            <element signature="e#8035#8043#0" expanded="true" />
-            <element signature="e#8108#8116#0" expanded="true" />
-            <element signature="e#8224#8232#0" expanded="true" />
-            <element signature="e#8297#8305#0" expanded="true" />
-            <element signature="e#8388#8396#0" expanded="true" />
-            <element signature="e#8471#8479#0" expanded="true" />
+            <element signature="e#7931#7939#0" expanded="true" />
+            <element signature="e#8002#8010#0" expanded="true" />
+            <element signature="e#8083#8091#0" expanded="true" />
+            <element signature="e#8186#8194#0" expanded="true" />
+            <element signature="e#8270#8278#0" expanded="true" />
+            <element signature="e#8366#8374#0" expanded="true" />
+            <element signature="e#8445#8453#0" expanded="true" />
             <element signature="e#8567#8575#0" expanded="true" />
-            <element signature="e#8642#8650#0" expanded="true" />
+            <element signature="e#8646#8654#0" expanded="true" />
+            <element signature="e#8743#8751#0" expanded="true" />
+            <element signature="e#8832#8840#0" expanded="true" />
+            <element signature="e#8934#8942#0" expanded="true" />
+            <element signature="e#9015#9023#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1232,24 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/prolog/asker/QueryBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.40782124">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Trip.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37726524">
@@ -1281,16 +1298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48105437">
-          <caret line="46" column="61" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/prolog/baza.pl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.535714">
@@ -1299,25 +1306,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#290#291#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/prolog/asker/QueryBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8118812">
-          <caret line="149" column="66" selection-start-line="149" selection-start-column="66" selection-end-line="149" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="3" selection-start-line="115" selection-start-column="3" selection-end-line="115" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7630#7638#0" expanded="true" />
-            <element signature="e#7695#7703#0" expanded="true" />
-            <element signature="e#7770#7778#0" expanded="true" />
-            <element signature="e#7867#7875#0" expanded="true" />
-            <element signature="e#7945#7953#0" expanded="true" />
-            <element signature="e#8035#8043#0" expanded="true" />
-            <element signature="e#8108#8116#0" expanded="true" />
-            <element signature="e#8224#8232#0" expanded="true" />
-            <element signature="e#8297#8305#0" expanded="true" />
-            <element signature="e#8388#8396#0" expanded="true" />
-            <element signature="e#8471#8479#0" expanded="true" />
+            <element signature="e#7931#7939#0" expanded="true" />
+            <element signature="e#8002#8010#0" expanded="true" />
+            <element signature="e#8083#8091#0" expanded="true" />
+            <element signature="e#8186#8194#0" expanded="true" />
+            <element signature="e#8270#8278#0" expanded="true" />
+            <element signature="e#8366#8374#0" expanded="true" />
+            <element signature="e#8445#8453#0" expanded="true" />
             <element signature="e#8567#8575#0" expanded="true" />
-            <element signature="e#8642#8650#0" expanded="true" />
+            <element signature="e#8646#8654#0" expanded="true" />
+            <element signature="e#8743#8751#0" expanded="true" />
+            <element signature="e#8832#8840#0" expanded="true" />
+            <element signature="e#8934#8942#0" expanded="true" />
+            <element signature="e#9015#9023#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3630363">
+          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -2,7 +2,6 @@ package prolog.asker;
 
 import com.google.common.base.Function;
 import com.google.common.collect.Collections2;
-import gui.MainFrame;
 import jpl.Query;
 import models.Trip;
 
