@@ -43,6 +43,8 @@ public class PrologAsker {
                 results.add(solut.toString());
                 results.add("\n");
             }
+        } else {
+            results.add("Brak wycieczek o podanych kryteriach.");
         }
 
         return results;

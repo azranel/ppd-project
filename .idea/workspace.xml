@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca771658-23c4-4c71-9add-9d74544d5898" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" afterPath="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/models/Trip.java" afterPath="$PROJECT_DIR$/src/main/java/models/Trip.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/prolog/baza.pl" afterPath="$PROJECT_DIR$/src/main/prolog/baza.pl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java" afterPath="$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ppd-project.iws" />
@@ -52,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrologAsker.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PrologAsker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.48105437">
+              <caret line="46" column="61" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gui/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33161512">
-              <caret line="208" column="42" selection-start-line="208" selection-start-column="42" selection-end-line="208" selection-end-column="42" />
+            <state vertical-scroll-proportion="-23.28">
+              <caret line="237" column="118" selection-start-line="237" selection-start-column="118" selection-end-line="237" selection-end-column="118" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/models/Trip.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="266" column="38" selection-start-line="266" selection-start-column="38" selection-end-line="266" selection-end-column="38" />
+              <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
               <folding>
                 <element signature="e#369#370#0" expanded="true" />
                 <element signature="e#399#400#0" expanded="true" />
@@ -143,10 +141,10 @@
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/prolog/asker/QueryBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java" />
         <option value="$PROJECT_DIR$/src/main/prolog/baza.pl" />
         <option value="$PROJECT_DIR$/src/main/java/models/Trip.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java" />
       </list>
     </option>
   </component>
@@ -699,7 +697,7 @@
       <workItem from="1433969440171" duration="136000" />
       <workItem from="1433974644590" duration="2363000" />
       <workItem from="1433979465171" duration="919000" />
-      <workItem from="1434005981304" duration="4537000" />
+      <workItem from="1434005981304" duration="4977000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/azranel/ppd-project&#10;&#10;Conflicts:&#10;&#9;src/main/java/gui/MainFrame.java&#10;">
       <created>1433979647137</created>
@@ -711,7 +709,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34225000" />
+    <option name="totallyTimeSpent" value="34665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -1205,10 +1203,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/prolog/baza.pl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="61" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.28">
+          <caret line="237" column="118" selection-start-line="237" selection-start-column="118" selection-end-line="237" selection-end-column="118" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Trip.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="266" column="38" selection-start-line="266" selection-start-column="38" selection-end-line="266" selection-end-column="38" />
+          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
           <folding>
             <element signature="e#369#370#0" expanded="true" />
             <element signature="e#399#400#0" expanded="true" />
@@ -1236,26 +1252,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/prolog/asker/PrologAsker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/prolog/baza.pl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="61" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33161512">
-          <caret line="208" column="42" selection-start-line="208" selection-start-column="42" selection-end-line="208" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.48105437">
+          <caret line="46" column="61" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
